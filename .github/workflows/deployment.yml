@@ -1,8 +1,16 @@
-name: Test Project
+name: Test Event trigger
 on:
   pull_request:
-    type: [opened, edited]
+    types:
+    - opened
   workflow_dispatch:
+  push:
+    branches:
+      - main
+      - 'dev-*'
+      - 'feat/**'
+    path-ignore:
+      - '.gitignore/workflows/*'
 jobs:
   test:
     runs-on: ubuntu-latest
