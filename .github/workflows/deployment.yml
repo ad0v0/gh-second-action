@@ -1,4 +1,4 @@
-name: Test Project
+name: Test Event trigger
 on:
   pull_request:
     type: [opened, edited]
